@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btCamera"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="16dp"
+        android:background="#03A9F4"
+        android:onClick="abrirCamera"
+        android:text="Cámara"
+        app:layout_constraintLeft_toRightOf="@+id/btGallery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btGallery"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="16dp"
+        android:background="#03A9F4"
+        android:onClick="abrirGaleria"
+        android:text="Galería"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btCamera"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="0dp"
+        android:layout_height="271dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btCamera"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btGallery"
+        app:layout_constraintTop_toBottomOf="@+id/btCamera" />
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="328dp"
+        android:layout_height="106dp"
+        android:layout_margin="10dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Resultados:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btlabelobect"
+        app:layout_constraintEnd_toEndOf="@+id/image_view"
+        app:layout_constraintStart_toStartOf="@+id/image_view"
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <Button
+        android:id="@+id/btlabelobect"
+        android:layout_width="123dp"
+        android:layout_height="51dp"
+        android:layout_margin="10dp"
+        android:background="@color/teal_700"
+        android:text="OBJ"
+        app:layout_constraintBottom_toTopOf="@id/btText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btText"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:background="#03A9F4"
+        android:onClick="OCRfx"
+        android:text="OCR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btFace" />
+
+    <Button
+        android:id="@+id/btFace"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:background="@color/teal_700"
+        android:onClick="Rostrosfx"
+        android:text="Rostros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
